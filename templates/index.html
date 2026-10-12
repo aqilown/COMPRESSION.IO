@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PDF Compressor</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@700;800&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfigurasi warna persis dari mockup -->
+    <script id="tailwind-config">
+        tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#b4c5ff", "secondary-fixed-dim": "#dec800", "surface-tint": "#0053db", "inverse-on-surface": "#f3f0ef", "on-error": "#ffffff", "inverse-surface": "#313030", "on-tertiary-fixed-variant": "#862200", "outline": "#737686", "on-tertiary-container": "#ffece8", "on-primary-fixed-variant": "#003ea8", "on-primary": "#ffffff", "on-surface": "#1c1b1b", "surface-container-lowest": "#ffffff", "on-secondary-container": "#6f6300", "surface-dim": "#dcd9d9", "tertiary-fixed-dim": "#ffb5a0", "on-secondary-fixed-variant": "#504700", "on-secondary-fixed": "#201c00", "secondary-fixed": "#fde400", "error-container": "#ffdad6", "surface-container-low": "#f6f3f2", "surface-container": "#f0edec", "on-primary-container": "#eeefff", "primary-container": "#2563eb", "secondary": "#6a5f00", "on-tertiary": "#ffffff", "error": "#ba1a1a", "outline-variant": "#c3c6d7", "tertiary-container": "#ca3700", "tertiary-fixed": "#ffdbd1", "surface": "#fcf8f8", "surface-container-highest": "#e5e2e1", "surface-bright": "#fcf8f8", "surface-variant": "#e5e2e1", "on-background": "#1c1b1b", "on-tertiary-fixed": "#3b0900", "on-secondary": "#ffffff", "tertiary": "#9f2a00", "inverse-primary": "#b4c5ff", "on-primary-fixed": "#00174b", "secondary-container": "#fae100", "primary-fixed": "#dbe1ff", "on-surface-variant": "#434655", "background": "#fcf8f8", "primary": "#004ac6", "surface-container-high": "#ebe7e7", "on-error-container": "#93000a" }, fontFamily: { "headline-sm": ["Space Grotesk"], "headline-xl": ["Space Grotesk"], "body-sm": ["Inter"], "headline-md": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "body-md": ["Inter"], "label-sm": ["Space Grotesk"], "headline-xl-mobile": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "body-lg": ["Inter"], "label-lg": ["Space Grotesk"], "label-md": ["Space Grotesk"] } } } }
+    </script>
+</head>
+
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased">
+    <header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest border-b-[3px] border-[#0A0A0A]">
+        <div class="h-16 max-w-[1440px] mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center gap-6">
+                <a class="flex items-center border-[3px] border-[#0A0A0A] bg-inverse-surface px-4 py-1 shadow-[3px_3px_0px_#0A0A0A]"
+                    href="#">
+                    <span class="font-headline-md uppercase text-surface tracking-tighter">Compressor<span
+                            class="text-secondary-fixed">.io</span></span>
+                </a>
+                <span
+                    class="hidden sm:inline-block border-[2px] border-[#0A0A0A] bg-secondary-fixed px-2 py-0.5 font-label-sm uppercase text-on-secondary-fixed shadow-[2px_2px_0px_#0A0A0A]">PRO
+                    UTILITY</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full pt-16 bg-background max-w-[1440px] mx-auto px-4 min-h-[calc(100vh-4rem)]">
+        <div class="flex flex-col w-full pb-16">
+
+            <!-- Top Announce -->
+            <div
+                class="w-full bg-[#FFE600] border-b-[3px] border-x-[3px] border-[#0A0A0A] px-4 py-2 flex items-center justify-between font-label-md mt-6">
+                <div class="flex items-center gap-2">
+                    <span class="inline-block w-2.5 h-2.5 bg-[#FF5722] border-[2px] border-[#0A0A0A]"></span>
+                    <span class="uppercase font-extrabold text-xs">Ghostscript Core Active</span>
+                </div>
+            </div>
+
+            <!-- Hero Section -->
+            <section class="py-12 border-b-[3px] border-x-[3px] border-[#0A0A0A] bg-[#FCF8F8] px-8">
+                <div class="max-w-3xl">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 bg-[#FFE600] border-[2px] border-[#0A0A0A] shadow-[3px_3px_0px_#0A0A0A] mb-4">
+                        <span class="material-symbols-outlined text-[16px] text-black">bolt</span>
+                        <span class="font-label-sm uppercase tracking-wider text-black">Aggressive Parallel
+                            Squashing</span>
+                    </div>
+                    <h1
+                        class="font-headline-xl text-4xl md:text-6xl font-black uppercase text-[#0A0A0A] tracking-tighter leading-none mb-4">
+                        Squash Heavy PDFs.<br />
+                        <span
+                            class="bg-[#FFE600] px-2 border-[3px] border-[#0A0A0A] inline-block mt-1 shadow-[4px_4px_0px_#0A0A0A]">FAST.
+                            NO LIMITS.</span>
+                    </h1>
+                    <p class="font-body-lg text-[#1C1B1B] max-w-2xl text-lg font-medium leading-snug">
+                        Lossless &amp; aggressive multi-core batch processing. Drop gigabytes of massive scanned
+                        documents straight into the queue.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Dropzone -->
+            <section class="py-8">
+                <div class="w-full bg-white border-[3px] border-dashed border-[#0A0A0A] p-12 text-center shadow-[6px_6px_0px_#0A0A0A] relative cursor-pointer group hover:bg-[#FFE600] transition-colors"
+                    id="dropzone" onclick="document.getElementById('pdfInput').click()"
+                    ondragleave="handleDragLeave(event)" ondragover="handleDragOver(event)" ondrop="handleDrop(event)">
+                    <input accept=".pdf" class="hidden" id="pdfInput" multiple type="file"
+                        onchange="handleFileSelect(event)" />
+                    <div
+                        class="mx-auto w-20 h-20 bg-white border-[3px] border-[#0A0A0A] flex items-center justify-center mb-5 shadow-[4px_4px_0px_#0A0A0A] group-hover:bg-white group-hover:translate-y-[2px]">
+                        <span class="material-symbols-outlined text-4xl text-black">folder_zip</span>
+                    </div>
+                    <div
+                        class="inline-block bg-[#0A0A0A] text-white px-3 py-1 font-label-sm uppercase tracking-widest text-xs mb-3">
+                        BATCH INGESTION PORT</div>
+                    <div class="flex flex-col items-center gap-3">
+                        <button
+                            class="bg-[#2563EB] text-white px-8 py-3.5 border-[3px] border-[#0A0A0A] shadow-[4px_4px_0px_#0A0A0A] font-label-lg uppercase tracking-wider font-extrabold pointer-events-none">
+                            SELECT PDF FILES
+                        </button>
+                        <p class="font-headline-sm text-xl font-bold uppercase text-[#0A0A0A] mt-2">Or Drag &amp; Drop
+                            Heavy PDFs Here</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Presets -->
+            <section class="mb-8">
+                <div class="bg-white border-[3px] border-[#0A0A0A] shadow-[5px_5px_0px_#0A0A0A] p-6">
+                    <h2 class="font-headline-md text-2xl font-black uppercase text-[#0A0A0A] mb-5">Target Compression
+                        Presets</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="preset-card cursor-pointer border-[3px] border-[#0A0A0A] p-4 bg-white shadow-[4px_4px_0px_#0A0A0A]"
+                            id="preset-screen" onclick="selectPreset('screen')">
+                            <span class="font-label-lg font-black uppercase text-sm block mb-2">Smallest file<br><span class="text-[11px] font-bold normal-case">Lowest quality (72 dpi)</span></span>
+                            <div
+                                class="pt-2 border-t-[2px] border-[#0A0A0A]/30 text-[11px] font-bold font-label-sm status-text text-outline">
+                                CLICK TO SELECT</div>
+                        </div>
+                        <div class="preset-card cursor-pointer border-[3px] border-[#0A0A0A] p-4 bg-[#FFE600] shadow-[4px_4px_0px_#0A0A0A]"
+                            id="preset-ebook" onclick="selectPreset('ebook')">
+                            <span class="font-label-lg font-black uppercase text-sm block mb-2">Balanced<br><span class="text-[11px] font-bold normal-case">Good quality (150 dpi)</span></span>
+                            <div
+                                class="pt-2 border-t-[2px] border-[#0A0A0A] text-[11px] font-bold font-label-sm status-text text-black">
+                                ACTIVE PRESET</div>
+                        </div>
+                        <div class="preset-card cursor-pointer border-[3px] border-[#0A0A0A] p-4 bg-white shadow-[4px_4px_0px_#0A0A0A]"
+                            id="preset-prepress" onclick="selectPreset('prepress')">
+                            <span class="font-label-lg font-black uppercase text-sm block mb-2">Best quality<br><span class="text-[11px] font-bold normal-case">Larger file (300 dpi)</span></span>
+                            <div
+                                class="pt-2 border-t-[2px] border-[#0A0A0A]/30 text-[11px] font-bold font-label-sm status-text text-outline">
+                                CLICK TO SELECT</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Processing Queue -->
+            <section class="mb-12">
+                <div class="bg-[#0A0A0A] text-white p-4 border-[3px] border-[#0A0A0A]">
+                    <span class="font-headline-sm uppercase text-lg">BATCH QUEUE</span>
+                </div>
+                <div class="flex flex-col gap-3 mt-3" id="queueList">
+                    <div class="p-8 text-center bg-white border-[3px] border-[#0A0A0A] shadow-[4px_4px_0px_#0A0A0A]">
+                        <span class="material-symbols-outlined text-4xl mb-2">inbox</span>
+                        <div class="font-headline-sm uppercase font-bold text-base">Ready for next batch</div>
+                        <p class="font-body-sm text-xs text-outline mt-1">Select or drag PDF files into the container
+                            above.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action Dock -->
+            <aside class="sticky bottom-4 z-40 w-full mt-4 hidden" id="actionDock">
+                <div
+                    class="bg-[#0A0A0A] border-[4px] border-[#0A0A0A] shadow-[8px_8px_0px_#0A0A0A] p-5 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="text-white font-headline-md text-xl font-bold uppercase tracking-tight" id="dockStatus">
+                        PROCESSING...</div>
+                    <button
+                        class="bg-[#FFE600] text-[#0A0A0A] px-8 py-3.5 border-[3px] border-[#FFE600] shadow-[4px_4px_0px_#FFFFFF] font-label-lg font-black uppercase hidden hover:bg-[#FFDF00]"
+                        id="btnDownload" onclick="triggerDownload()">
+                        DOWNLOAD RESULTS
+                    </button>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <script>
+        let activePreset = '/ebook';
+        let currentTaskId = null;
+        let pollInterval = null;
+
+        function selectPreset(preset) {
+            activePreset = '/' + preset;
+            document.querySelectorAll('.preset-card').forEach(card => {
+                card.className = "preset-card cursor-pointer border-[3px] border-[#0A0A0A] p-4 bg-white shadow-[4px_4px_0px_#0A0A0A]";
+                card.querySelector('.status-text').textContent = "CLICK TO SELECT";
+                card.querySelector('.status-text').className = "pt-2 border-t-[2px] border-[#0A0A0A]/30 text-[11px] font-bold font-label-sm status-text text-outline";
+            });
+            const activeCard = document.getElementById('preset-' + preset);
+            activeCard.className = "preset-card cursor-pointer border-[3px] border-[#0A0A0A] p-4 bg-[#FFE600] shadow-[4px_4px_0px_#0A0A0A]";
+            activeCard.querySelector('.status-text').textContent = "ACTIVE PRESET";
+            activeCard.querySelector('.status-text').className = "pt-2 border-t-[2px] border-[#0A0A0A] text-[11px] font-bold font-label-sm status-text text-black";
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            document.getElementById('dropzone').classList.add('bg-[#FFE600]');
+        }
+
+        function handleDragLeave(e) {
+            e.preventDefault();
+            document.getElementById('dropzone').classList.remove('bg-[#FFE600]');
+        }
+
+        function handleDrop(e) {
+            e.preventDefault();
+            handleDragLeave(e);
+            if (e.dataTransfer.files.length > 0) startUpload(e.dataTransfer.files);
+        }
+
+        function handleFileSelect(e) {
+            if (e.target.files.length > 0) startUpload(e.target.files);
+        }
+
+        async function startUpload(files) {
+            const list = document.getElementById('queueList');
+            list.innerHTML = '';
+            const formData = new FormData();
+            formData.append('quality', activePreset);
+
+            for (let i = 0; i < files.length; i++) {
+                formData.append('files', files[i]);
+                const mbSize = (files[i].size / (1024 * 1024)).toFixed(1);
+                list.innerHTML += `
+          <div class="file-row bg-white border-[3px] border-[#0A0A0A] p-5 shadow-[4px_4px_0px_#0A0A0A] flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="flex items-center gap-3.5 min-w-0">
+              <div class="w-10 h-10 bg-[#2563EB] border-[2px] border-[#0A0A0A] text-white flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined font-bold">bolt</span>
+              </div>
+              <div class="min-w-0">
+                <div class="font-headline-sm text-base font-bold text-[#0A0A0A] truncate">${files[i].name}</div>
+                <div class="font-label-sm text-xs text-[#434655] font-mono mt-1">Size: ${mbSize} MB</div>
+              </div>
+            </div>
+            <div class="w-full sm:w-48">
+              <div class="w-full h-3 bg-[#F0EDEC] border-[2px] border-[#0A0A0A]">
+                <div class="h-full bg-[#2563EB] transition-all duration-300 progress-fill" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>`;
+            }
+
+            document.getElementById('actionDock').classList.remove('hidden');
+            document.getElementById('dockStatus').innerText = "UPLOADING TO SERVER...";
+            document.getElementById('btnDownload').classList.add('hidden');
+
+            try {
+                const response = await fetch('/api/compress-pdf', { method: 'POST', body: formData });
+                const data = await response.json();
+
+                if (data.task_id) {
+                    currentTaskId = data.task_id;
+                    document.getElementById('dockStatus').innerText = "GHOSTSCRIPT CRUNCHING... 0%";
+                    pollStatus();
+                } else {
+                    alert("Error: " + data.error);
+                }
+            } catch (err) { alert("Upload failed: " + err); }
+        }
+
+        function pollStatus() {
+            let fakeProgress = 0;
+            pollInterval = setInterval(async () => {
+                try {
+                    const res = await fetch('/api/compress-status/' + currentTaskId);
+                    const data = await res.json();
+
+                    if (data.status === 'processing') {
+                        fakeProgress = Math.min(fakeProgress + (Math.random() * 15), 99);
+                        updateBars(fakeProgress);
+                        document.getElementById('dockStatus').innerText = `GHOSTSCRIPT CRUNCHING... ${Math.floor(fakeProgress)}%`;
+                    } else if (data.status === 'done') {
+                        clearInterval(pollInterval);
+                        updateBars(100);
+                        document.getElementById('dockStatus').innerText = "COMPRESSION COMPLETE!";
+                        document.getElementById('btnDownload').classList.remove('hidden');
+                    } else {
+                        clearInterval(pollInterval);
+                        alert("Error: " + data.error);
+                    }
+                } catch (e) { console.error(e); }
+            }, 1500);
+        }
+
+        function updateBars(percent) {
+            document.querySelectorAll('.progress-fill').forEach(bar => {
+                bar.style.width = percent + '%';
+                if (percent >= 100) bar.classList.replace('bg-[#2563EB]', 'bg-[#10B981]');
+            });
+        }
+
+        function triggerDownload() {
+            if (currentTaskId) {
+                window.location.href = '/api/compress-download/' + currentTaskId;
+                setTimeout(() => {
+                    document.getElementById('actionDock').classList.add('hidden');
+                    document.getElementById('queueList').innerHTML = `<div class="p-8 text-center bg-white border-[3px] border-[#0A0A0A] shadow-[4px_4px_0px_#0A0A0A]"><span class="material-symbols-outlined text-4xl mb-2">inbox</span><div class="font-headline-sm uppercase font-bold text-base">Ready for next batch</div><p class="font-body-sm text-xs text-outline mt-1">Select or drag PDF files into the container above.</p></div>`;
+                }, 2500);
+            }
+        }
+    </script>
+</body>
+
+</html>
