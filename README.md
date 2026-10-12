@@ -24,7 +24,7 @@ A small web app that compresses PDFs with [Ghostscript](https://ghostscript.com/
 ## Setup
 
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/aqilown/COMPRE.git>
 cd PDFCOMPRESSOR
 python -m venv .venv
 .venv\Scripts\activate        # Linux/macOS: source .venv/bin/activate
